@@ -1,6 +1,6 @@
 # ZXTouch Rootless
 
-Rootless and roothide port of ZXTouch for iOS 15 to 17, maintained by [Epic0001](https://github.com/Epic0001/zxtouchrootless).
+Rootless and roothide port of ZXTouch for iOS 15 to 17. This fork is maintained at [gitssie/zxtouchrootless](https://github.com/gitssie/zxtouchrootless) and builds on [Epic0001's port](https://github.com/Epic0001/zxtouchrootless).
 
 A system-wide touch simulation library for iOS. It simulates touches, plays back recordings, and runs automation scripts without injecting into any app process.
 
@@ -62,9 +62,11 @@ Roothide and Serotonin:
 
 ## Installation
 
+For this fork, add `https://gitssie.github.io/zxtouchrootless` as a source in Sileo and install **ZXTouch (Roothide)** on Roothide/Serotonin or **ZXTouch** on Dopamine/NathanLR. The source serves separate packages for the two architectures.
+
 From GitHub releases:
 
-1. Download the latest `.deb` from [Releases](https://github.com/Epic0001/zxtouchrootless/releases). Use `*_rootless.deb` for Dopamine and NathanLR, or `*_roothide.deb` for Roothide and Serotonin.
+1. Download the latest `.deb` from [this fork's Releases](https://github.com/gitssie/zxtouchrootless/releases). Use `*_rootless.deb` for Dopamine and NathanLR, or `*_roothide.deb` for Roothide and Serotonin.
 2. Install it with Filza, or over SSH:
 
 ```sh
@@ -73,9 +75,11 @@ dpkg -i <file>.deb && killall -9 SpringBoard
 
 From GitHub Actions, for the latest build:
 
-1. Open [Actions](https://github.com/Epic0001/zxtouchrootless/actions)
+1. Open [Actions](https://github.com/gitssie/zxtouchrootless/actions)
 2. Open the most recent successful run
 3. Download the `ZXTouch-rootless-deb` or `ZXTouch-roothide-deb` artifact
+
+Maintainers can build and publish this fork's Sileo repository from the Mac with `scripts/publish_github_pages.sh publish`. See [the publication guide](docs/github-pages-sileo-publication.md).
 
 ---
 

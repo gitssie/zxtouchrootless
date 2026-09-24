@@ -7,9 +7,6 @@
 {
     BOOL inProgress;
 
-    VNRequest* requestResult;
-    NSError* errorResult;
-
     VNImageRequestHandler* requestHandler;
     VNRecognizeTextRequest* request;
 
@@ -75,10 +72,10 @@
             requestHandler = [[VNImageRequestHandler alloc] initWithCIImage:image options:nil];
         }
 
-        request = [[VNRecognizeTextRequest alloc] initWithCompletionHandler:^(VNRequest *request, NSError *error){
-            requestResult = request;
-            errorResult = error;
-        }];
+        // performRequests: is synchronous. Read results from request directly;
+        // a completion block that writes ivars captures self and creates a
+        // cycle (self -> request -> completion block -> self) for every OCR call.
+        request = [[VNRecognizeTextRequest alloc] initWithCompletionHandler:nil];
 
         // may cause crash
         if (SYSTEM_VERSION_LESS_THAN(@"14.0"))
@@ -121,6 +118,7 @@ Return the string from a area
 
     if (err)
     {
+        inProgress = false;
         NSLog(@"com.zjx.springboard: error happened while performing ocr. %@", err);
         *error = [NSError errorWithDomain:@"com.zjx.zxtouchsp" code:999 userInfo:@{NSLocalizedDescriptionKey:[NSString stringWithFormat:@"-1;;Error happened while performing ocr. Error: %@\r\n", err]}];
         return nil;
@@ -128,7 +126,7 @@ Return the string from a area
     
     NSMutableArray<NSString*>* stringList = [[NSMutableArray alloc] init];
 
-    for (VNRecognizedTextObservation* i in requestResult.results)
+    for (VNRecognizedTextObservation* i in request.results)
     {
         VNRecognizedText* text = [i topCandidates:1][0];
         NSString* textString = [text string];
@@ -162,10 +160,11 @@ Return area that contain text
     inProgress = true;
 
     NSError* err = nil;
-    UIImage* test = [self drawDebugOutputfromArray:requestResult.results error:&err];
+    UIImage* test = [self drawDebugOutputfromArray:request.results error:&err];
 
     if (err)
     {
+        inProgress = false;
         NSLog(@"com.zjx.springboard: error while outputing debug image.");
         return;
     }
