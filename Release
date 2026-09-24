@@ -1,0 +1,23 @@
+Origin: ZXTouch Rootless
+Label: ZXTouch Rootless
+Suite: stable
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm64 iphoneos-arm64e
+Components: main
+Description: ZXTouch Rootless packages for iOS 15-17
+MD5Sum:
+ 3ab69f4c864941c415ce742609308ded 1421 Packages
+ 22e2b324a3ed4ed522dbf712fba612bf 577 Packages.gz
+ b355a9414615341b71e650f5a6af8de9 640 Packages.xz
+ 52ffafb48b6b8aa9fa8ec4d18f9aea28 576 Packages.zst
+SHA1:
+ 59bbcb4a3fb198608ba0123b6975ebccbddc6602 1421 Packages
+ 5b27476aba94eb215681ba29db635bf00f3680d4 577 Packages.gz
+ 027e6dbf8f4964102732f9951c6d6867507f8eb0 640 Packages.xz
+ f74a89239c206e6fee6be057a27d8e097c5a4d3d 576 Packages.zst
+SHA256:
+ 73c3242c8d70f63f0fea94b75caff61b6c313eb6cc9aa03ad321eb8b0569c119 1421 Packages
+ aa6b646b88dd51a1889932bb635c5ce477dfb3eb594d423a211cf94f0aa0021c 577 Packages.gz
+ 28cf9e7f5218c4af3d23bf7ae63154a5108ed1f5532eb9ed09430a14d5cbbf5e 640 Packages.xz
+ 4f3fa6912767e123402267be7932631c9de6e4c84b37777c0e13691b2a1d7e7a 576 Packages.zst

@@ -1,0 +1,39 @@
+Package: com.zjx.ioscontrol
+Name: ZXTouch (Roothide)
+Depends: mobilesubstrate | ellekit, firmware (>= 15.0)
+Description: ZXTouch Main Application (rootless, iOS 15-16)
+Maintainer: Jason Z
+Author: Jason Z
+Section: Utilities
+Tag: role::developer
+Architecture: iphoneos-arm64e
+Version: 1.0.1
+Installed-Size: 5008
+Filename: debs/com.zjx.ioscontrol_1.0.1_roothide.deb
+Size: 1006224
+MD5sum: 4fca5770de8b09cbd3172311ca5fcbcd
+SHA1: 96b9da4aac0074070cc57f3f39bb49c41463a159
+SHA256: 4e58397cf7937dab3f0f6ff46f0576ad8533619f9cd3e720d5ae4935b8dc3c9e
+Homepage: https://gitssie.github.io/zxtouchrootless
+Depiction: https://gitssie.github.io/zxtouchrootless
+SileoDepiction: https://gitssie.github.io/zxtouchrootless/depiction.json
+
+Package: com.zjx.ioscontrol
+Name: ZXTouch
+Depends: mobilesubstrate | ellekit, firmware (>= 15.0)
+Description: ZXTouch Main Application (rootless, iOS 15-16)
+Maintainer: Jason Z
+Author: Jason Z
+Section: Utilities
+Tag: role::developer
+Architecture: iphoneos-arm64
+Version: 1.0.1
+Installed-Size: 5040
+Filename: debs/com.zjx.ioscontrol_1.0.1_rootless.deb
+Size: 1006194
+MD5sum: 04ca59e4dcc7d3de769a9c594708b9fb
+SHA1: aefdb854d60de10fdfcef11b77a4b9f74d631eec
+SHA256: 9a2065c6ba72e5c55094dd048cddf75a600bb03a0b692fdbfc50ad28785330fa
+Homepage: https://gitssie.github.io/zxtouchrootless
+Depiction: https://gitssie.github.io/zxtouchrootless
+SileoDepiction: https://gitssie.github.io/zxtouchrootless/depiction.json
